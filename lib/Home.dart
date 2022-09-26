@@ -1,4 +1,5 @@
 import 'package:bmicalculator_app/Gender.dart';
+import 'package:bmicalculator_app/Height.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -42,6 +43,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     onChange: (genderVal) {
                       gender = genderVal;
                     },
+                ),
+                HeightWidget(
+                    onChange: (heightVal) {
+                      height = heightVal;
+                    }
                 ),
               ],
             ),
