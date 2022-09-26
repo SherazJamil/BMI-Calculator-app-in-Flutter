@@ -1,3 +1,4 @@
+import 'package:bmicalculator_app/Gender.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -8,6 +9,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  int gender = 0;
+  int age = 0;
+  int height = 0;
+  int weight = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +35,16 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Container(
           padding: const EdgeInsets.all(10),
           child: Card(
-
+            shape: const RoundedRectangleBorder(),
+            child: Column(
+              children: [
+                GenderWidget(
+                    onChange: (genderVal) {
+                      gender = genderVal;
+                    },
+                ),
+              ],
+            ),
           ),
         ),
       ),
