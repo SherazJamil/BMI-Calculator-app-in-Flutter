@@ -22,10 +22,8 @@ class _GenderWidgetState extends State<GenderWidget> {
   final ChoiceChip3DStyle unselectStyle = ChoiceChip3DStyle(
       topColor: Colors.white,
       backColor: Colors.grey[300]!,
-      borderRadius: BorderRadius.circular(20)
+      borderRadius: BorderRadius.circular(20),
   );
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +33,7 @@ class _GenderWidgetState extends State<GenderWidget> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ChoiceChip3D(
+            height: 100,
             border: Border.all(
               color: Colors.grey,
             ),
@@ -49,6 +48,9 @@ class _GenderWidgetState extends State<GenderWidget> {
               selected: gender == 1,
               child: Column(
                 children: [
+                  const SizedBox(
+                    height: 10,
+                  ),
                   Image.asset(
                     "assets/male.png",
                     width: 50,
@@ -58,14 +60,18 @@ class _GenderWidgetState extends State<GenderWidget> {
                   ),
                   const Text(
                     'Male',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),
           ),
           const SizedBox(
-            width: 20,
+            width: 50,
           ),
           ChoiceChip3D(
+            height: 100,
             border: Border.all(
               color: Colors.grey,
             ),
@@ -80,6 +86,9 @@ class _GenderWidgetState extends State<GenderWidget> {
             selected: gender == 2,
             child: Column(
               children: [
+                const SizedBox(
+                  height: 10,
+                ),
                 Image.asset(
                   "assets/female.png",
                   width: 50,
@@ -89,6 +98,9 @@ class _GenderWidgetState extends State<GenderWidget> {
                 ),
                 const Text(
                   'Female',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ],
             ),

@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
         const SystemUiOverlayStyle(
-          statusBarColor: Color(0xFF1DBF73),
-          statusBarBrightness: Brightness.light,
-          statusBarIconBrightness: Brightness.light,
+          statusBarColor: Colors.amber,
+          statusBarBrightness: Brightness.dark,
+          statusBarIconBrightness: Brightness.dark,
         ));
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
